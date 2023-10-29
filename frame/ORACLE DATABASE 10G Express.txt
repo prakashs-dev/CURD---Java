@@ -1,0 +1,33 @@
+ORACLE DATABASE 10G Express
+---------------------------
+
+Student ID - Auto Increment
+Student Name
+Student Age 
+Student City
+
+// first run
+
+CREATE TABLE Student (
+  Id NUMBER,
+  Name VARCHAR2(255),
+  Age NUMBER,
+  city VARCHAR2(255),
+  PRIMARY KEY(Id)
+);
+
+// second run
+
+CREATE SEQUENCE student_id
+  START WITH 1
+  CACHE 10;
+
+Insert into Student Values(student_id.NEXTVAL,'RAM',12,'TRT');
+
+select * from student;
+
+if you want to drop table use below query
+
+drop SEQUENCE student_id
+dropTABLE Student
+
